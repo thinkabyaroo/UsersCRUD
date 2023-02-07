@@ -20,10 +20,10 @@ public class UserRepositoryTests {
     @Test
     public void testAddNew(){
         User user= new User();
-        user.setEmail("နှာနီ@gmail.com");
-        user.setPassword("cattt");
+        user.setEmail("နှာနီနီ@gmail.com");
+        user.setPassword("catt");
         user.setFirstName("နှာ");
-        user.setLastName("နီ");
+        user.setLastName("နီနီ");
 
         User savedUser = repo.save(user);
 
@@ -58,7 +58,7 @@ public class UserRepositoryTests {
     }
     @Test
     public void testDelete(){
-        Integer userID=2;
+        Integer userID=3;
         repo.deleteById(userID);
         Optional<User> optionalUser = repo.findById(userID);
         Assertions.assertThat(optionalUser).isNotPresent();

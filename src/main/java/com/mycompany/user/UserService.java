@@ -9,4 +9,8 @@ public class UserService {
     public Iterable<User> listAll(){
         return repo.findAll();
     }
+
+    public void save(User user) {
+        repo.save(user);
+    }
 }
